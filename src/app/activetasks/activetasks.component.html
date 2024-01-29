@@ -1,0 +1,19 @@
+<div class="scroll-div">
+<table class="table table-success table-hover  mt-5" >
+  <thead>
+    <tr>
+      <th scope="col" >#</th>
+      <th scope="col" >Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of doneTasks$ | async ;let i=index">
+      <th scope="row">{{i+1}}</th>
+      
+      <td><a (click)="func(todo.id)">{{ todo.title }}</a> </td>
+      
+    </tr>
+   
+  </tbody>
+</table>
+</div>
